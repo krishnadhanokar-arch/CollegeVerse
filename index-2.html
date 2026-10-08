@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CollegeVerse | Discover Colleges in India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="brand">
+      <div class="brand-mark">CV</div>
+      <div>
+        <h1>CollegeVerse</h1>
+        <p>Discover your future</p>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#colleges">Colleges</a>
+      <a href="#courses">Courses</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="btn btn-outline" id="loginBtn">Login</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="hero-badge">India's college discovery platform</span>
+        <h2>Find the right college, course, and city for your next step.</h2>
+        <p>
+          Search colleges across India, compare courses, check locations, and explore institutes that match your goals.
+        </p>
+
+        <div class="search-bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search colleges, courses, or cities..."
+          />
+          <button class="btn btn-primary" id="searchBtn">Search</button>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="exploreBtn">Explore Colleges</button>
+          <button class="btn btn-secondary" id="coursesBtn">Browse Courses</button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-card">
+            <h3>500+</h3>
+            <p>Colleges</p>
+          </div>
+          <div class="stat-card">
+            <h3>100+</h3>
+            <p>Courses</p>
+          </div>
+          <div class="stat-card">
+            <h3>50K+</h3>
+            <p>Students</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="floating-card top-card">
+          <span>Trending</span>
+          <strong>Top engineering colleges</strong>
+          <small>Delhi, Pune, Bengaluru</small>
+        </div>
+
+        <div class="floating-card middle-card">
+          <span>Popular</span>
+          <strong>BCA / B.Tech / MBA</strong>
+          <small>Fresh, in-demand programs</small>
+        </div>
+
+        <div class="floating-card bottom-card">
+          <span>Smart Search</span>
+          <strong>Filter by city and course</strong>
+          <small>Fast, clean, and simple</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="filters">
+      <div class="section-heading">
+        <span>Quick filters</span>
+        <h2>Search by category</h2>
+      </div>
+
+      <div class="chip-group">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="engineering">Engineering</button>
+        <button class="chip" data-filter="management">Management</button>
+        <button class="chip" data-filter="computing">Computing</button>
+        <button class="chip" data-filter="design">Design</button>
+        <button class="chip" data-filter="medical">Medical</button>
+      </div>
+    </section>
+
+    <section class="section" id="colleges">
+      <div class="section-heading">
+        <span>Featured colleges</span>
+        <h2>Explore top institutes</h2>
+      </div>
+
+      <div class="card-grid" id="collegeGrid">
+
+        <article class="college-card" data-category="engineering computing" data-college="IIT Delhi" data-city="Delhi" data-course="B.Tech CSE">
+          <div class="card-top">
+            <div class="college-icon">IIT</div>
+            <div>
+              <h3>IIT Delhi</h3>
+              <p>Delhi</p>
+            </div>
+          </div>
+          <p class="card-desc">Premier institute known for engineering, innovation, and strong placement opportunities.</p>
+          <div class="tag-row">
+            <span>B.Tech CSE</span>
+            <span>Public</span>
+            <span>Delhi</span>
+          </div>
+          <button class="btn btn-card detailsBtn">View Details</button>
+        </article>
+
+        <article class="college-card" data-category="computing" data-college="VIT Vellore" data-city="Tamil Nadu" data-course="BCA / B.Tech">
+          <div class="card-top">
+            <div class="college-icon">VIT</div>
+            <div>
+              <h3>VIT Vellore</h3>
+              <p>Tamil Nadu</p>
+            </div>
+          </div>
+          <p class="card-desc">A leading private university with excellent tech programs, labs, and industry exposure.</p>
+          <div class="tag-row">
+            <span>BCA</span>
+            <span>Private</span>
+            <span>Tech</span>
+          </div>
+          <button class="btn btn-card detailsBtn">View Details</button>
+        </article>
+
+        <article class="college-card" data-category="management" data-college="MIT Pune" data-city="Pune" data-course="MBA / BBA">
+          <div class="card-top">
+            <div class="college-icon">MIT</div>
+            <div>
+              <h3>MIT Pune</h3>
+              <p>Pune</p>
+            </div>
+          </div>
+          <p class="card-desc">Known for management, business studies, and an active campus culture.</p>
+          <div class="tag-row">
+            <span>MBA</span>
+            <span>Private</span>
+            <span>Pune</span>
+          </div>
+          <button class="btn btn-card detailsBtn">View Details</button>
+        </article>
+
+        <article class="college-card" data-category="design" data-college="NIFT Mumbai" data-city="Mumbai" data-course="Fashion & Design">
+          <div class="card-top">
+            <div class="college-icon">NF</div>
+            <div>
+              <h3>NIFT Mumbai</h3>
+              <p>Mumbai</p>
+            </div>
+          </div>
+          <p class="card-desc">A top design institute for fashion, creativity, branding, and product design.</p>
+          <div class="tag-row">
+            <span>Design</span>
+            <span>Creative</span>
+            <span>Mumbai</span>
+          </div>
+          <button class="btn btn-card detailsBtn">View Details</button>
+        </article>
+
+        <article class="college-card" data-category="medical" data-college="AIIMS Delhi" data-city="Delhi" data-course="MBBS / Medical Sciences">
+          <div class="card-top">
+            <div class="college-icon">AI</div>
+            <div>
+              <h3>AIIMS Delhi</h3>
+              <p>Delhi</p>
+            </div>
+          </div>
+          <p class="card-desc">India's top medical institute for healthcare, research, and clinical excellence.</p>
+          <div class="tag-row">
+            <span>Medical</span>
+            <span>Government</span>
+            <span>Delhi</span>
+          </div>
+          <button class="btn btn-card detailsBtn">View Details</button>
+        </article>
+
+        <article class="college-card" data-category="computing engineering" data-college="MIT World Peace University" data-city="Pune" data-course="BCA / Engineering">
+          <div class="card-top">
+            <div class="college-icon">WP</div>
+            <div>
+              <h3>MIT-WPU</h3>
+              <p>Pune</p>
+            </div>
+          </div>
+          <p class="card-desc">A modern university with diverse programs and strong tech learning ecosystem.</p>
+          <div class="tag-row">
+            <span>Computing</span>
+            <span>Pune</span>
+            <span>Modern</span>
+          </div>
+          <button class="btn btn-card detailsBtn">View Details</button>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section" id="courses">
+      <div class="section-heading">
+        <span>Popular courses</span>
+        <h2>Choose your path</h2>
+      </div>
+
+      <div class="course-grid">
+        <article class="course-card">
+          <h3>BCA</h3>
+          <p>Computer Applications, software basics, web development, and IT fundamentals.</p>
+        </article>
+
+        <article class="course-card">
+          <h3>B.Tech</h3>
+          <p>Engineering programs with multiple specializations like CSE, AI, and Cloud.</p>
+        </article>
+
+        <article class="course-card">
+          <h3>MBA</h3>
+          <p>Business, marketing, finance, and management-oriented career paths.</p>
+        </article>
+
+        <article class="course-card">
+          <h3>Design</h3>
+          <p>UI/UX, fashion, graphic design, and creative digital experience programs.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split-section">
+      <div class="section-heading left">
+        <span>Why CollegeVerse?</span>
+        <h2>Built for simple, fast discovery</h2>
+      </div>
+
+      <div class="benefits">
+        <div class="benefit-item">
+          <h3>Smart search</h3>
+          <p>Find colleges by name, city, or course in seconds.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>Clean comparison</h3>
+          <p>Explore key details without clutter or confusion.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>Responsive design</h3>
+          <p>Looks good on laptop, tablet, and mobile screens.</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Need help finding the right college?</p>
+
+    <div class="contact-card">
+        <p>📧 Email: support@collegeverse.com</p>
+        <p>📞 Phone: +91 98765 43210</p>
+        <p>📍 Location: Pune, Maharashtra, India</p>
+    </div>
+</section>
+  </main>
+
+  
+
+  <div class="modal" id="collegeModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModal">&times;</button>
+      <h3 id="modalTitle">College Name</h3>
+      <p id="modalCity">City</p>
+      <p id="modalCourse">Course</p>
+      <p id="modalText">
+        College details will appear here.
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- Auth Modal -->
+<div class="auth-modal" id="authModal" aria-hidden="true">
+  <div class="auth-card">
+    <button class="auth-close" id="closeAuth" aria-label="Close">&times;</button>
+
+    <div class="auth-top">
+      <div class="auth-badge">CollegeVerse</div>
+      <h2>Welcome back</h2>
+      <p>Login or create your account to explore colleges, courses, and cities.</p>
+    </div>
+
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-target="loginForm" type="button">Login</button>
+      <button class="auth-tab" data-target="signupForm" type="button">Sign Up</button>
+    </div>
+
+    <form class="auth-form active" id="loginForm">
+      <label>Email</label>
+      <input type="email" id="loginEmail" placeholder="Enter your email" required>
+
+      <label>Password</label>
+      <input type="password" id="loginPassword" placeholder="Enter your password" required>
+
+      <button type="submit" class="auth-btn">Login</button>
+      <p class="auth-note">By continuing, you agree to our Terms and Privacy Policy.</p>
+    </form>
+
+    <form class="auth-form" id="signupForm">
+      <label>Full Name</label>
+      <input type="text" id="signupName" placeholder="Enter your name" required>
+
+      <label>Email</label>
+      <input type="email" id="signupEmail" placeholder="Enter your email" required>
+
+      <label>Password</label>
+      <input type="password" id="signupPassword" placeholder="Create a password" required>
+
+      <label>Course</label>
+      <input type="text" id="signupCourse" placeholder="BCA / B.Tech / MBA etc." required>
+
+      <button type="submit" class="auth-btn">Create Account</button>
+      <p class="auth-note">Already have an account? Use the Login tab.</p>
+    </form>
+  </div>
+</div>
+</body>
+</html>
